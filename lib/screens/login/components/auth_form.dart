@@ -74,7 +74,7 @@ class _AuthFormState extends State<AuthForm> {
             //        blurRadius: 16, spreadRadius: 16, color: Colors.black12),
             //  ]),
             padding: const EdgeInsets.all(16),
-            height: _isLogin() ? 320 : 450,
+            height: _isLogin() ? 340 : 450,
             width: deviceSize.width * 0.75,
             child: Form(
                 key: _formKey,

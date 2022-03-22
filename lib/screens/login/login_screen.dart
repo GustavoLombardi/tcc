@@ -1,7 +1,6 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:tcc/screens/background.dart';
 import 'package:tcc/screens/login/components/auth_form.dart';
 import 'package:tcc/screens/themes/styles.dart';
 
@@ -23,7 +22,7 @@ class _LoginPageState extends State<LoginPage> {
               gradient: LinearGradient(
                 colors: [
                   AppColors.primary,
-                  AppColors.primary,
+                  Color.fromARGB(255, 52, 82, 67),
                 ],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
@@ -42,7 +41,7 @@ class _LoginPageState extends State<LoginPage> {
                   transform: Matrix4.rotationZ(-8 * pi / 180),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      color: Colors.deepOrange,
+                      color: Color.fromARGB(255, 168, 148, 142),
                       boxShadow: const [
                         BoxShadow(
                           blurRadius: 8,
@@ -50,7 +49,7 @@ class _LoginPageState extends State<LoginPage> {
                           offset: Offset(0, 2),
                         )
                       ]),
-                  child: Text('Minha Loja'),
+                  child: Text('App'),
                 ),
                 AuthForm(),
               ],

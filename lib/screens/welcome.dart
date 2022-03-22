@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tcc/screens/home/home_page.dart';
+import 'package:tcc/screens/themes/styles.dart';
 
 import 'glassmorphism.dart';
 
@@ -9,103 +11,56 @@ class Welcome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
+        body: SafeArea(
+      bottom: false,
+      child: Stack(
         children: [
-          SizedBox(
-            width: double.infinity,
-            height: double.infinity,
+          Align(
+            alignment: Alignment.bottomCenter,
             child: Image.asset(
-              "assets/images/testes.jpg",
-              fit: BoxFit.cover,
+              'assets/images/onboarding_illustration.png',
+              width: MediaQuery.of(context).size.width,
+              fit: BoxFit.fitWidth,
             ),
           ),
-          SafeArea(
-            child: Column(
-              children: [
-                const SizedBox(
-                  height: 20.0,
-                ),
-                const Center(
-                  child: Text(
-                    'Welcome to\nFlutter Desgin',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 40.0,
-                      fontWeight: FontWeight.bold,
+          Positioned(
+            top: MediaQuery.of(context).size.height / 6,
+            child: Padding(
+              padding: EdgeInsets.symmetric(
+                  horizontal: MediaQuery.of(context).size.width / 8),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    'Agende sua consulta',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 32),
+                  ),
+                  const SizedBox(height: 20),
+                  const Text('Lorem ipsum dolor'),
+                  const SizedBox(height: 20),
+                  MaterialButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => HomeScreen()));
+                    },
+                    color: AppColors.primary,
+                    padding: const EdgeInsets.symmetric(horizontal: 30),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: const Text(
+                      'Vamos Começar',
+                      style: TextStyle(color: Colors.white),
                     ),
                   ),
-                ),
-                const Spacer(),
-                // Build Widget Glassmorphism
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 20,
-                  ),
-                  child: Glassmorphism(
-                    blur: 15,
-                    opacity: 0.2,
-                    radius: 20,
-                    child: Container(
-                      height: 200,
-                      padding: const EdgeInsets.all(20),
-                      child: Column(
-                        children: [
-                          const Text(
-                            'Explore and Learn Flutter',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 24.0,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          Text(
-                            'Learn the best design here',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white.withOpacity(0.8),
-                              fontSize: 16.0,
-                            ),
-                          ),
-                          const Spacer(),
-                          Glassmorphism(
-                            blur: 20,
-                            opacity: 0.1,
-                            radius: 50.0,
-                            child: TextButton(
-                              onPressed: () {
-                                // handle push to HomeScreen
-                              },
-                              child: Container(
-                                padding: const EdgeInsets.symmetric(
-                                  vertical: 20,
-                                  horizontal: 20,
-                                ),
-                                child: const Text(
-                                  'Get started now',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 20.0,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 100,
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
+          )
         ],
       ),
-    );
+    ));
   }
 }
