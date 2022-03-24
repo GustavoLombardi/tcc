@@ -98,7 +98,7 @@ class DetailScreen extends StatelessWidget {
                                 style: const TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 20,
-                                  color: AppColors.blue,
+                                  color: Color.fromARGB(255, 255, 255, 255),
                                 ),
                               ),
                               const SizedBox(
@@ -163,11 +163,11 @@ class DetailScreen extends StatelessWidget {
                         height: 50,
                       ),
                       const Text(
-                        'About Doctor',
+                        'Informações da Faculdade',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 18,
-                          color: AppColors.primary,
+                          color: Colors.white,
                         ),
                       ),
                       const SizedBox(

@@ -28,6 +28,11 @@ dependencies:
   get: ^4.6.1
   flutter_svg: ^1.0.3
   url_launcher: ^6.0.20
+  dio: ^4.0.1
+  sizer: ^2.0.15
+  connectivity: ^3.0.6
+  lottie: ^1.2.1
+  flutter_vector_icons: ^1.0.0
 
 dev_dependencies:
   flutter_test:

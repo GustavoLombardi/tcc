@@ -1,9 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tcc/screens/home/home_page.dart';
 import 'package:tcc/screens/themes/styles.dart';
-
-import 'glassmorphism.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({Key? key}) : super(key: key);
@@ -32,8 +29,8 @@ class Welcome extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
-                    'Agende sua consulta',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 32),
+                    'Agende seu atendimento',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                   ),
                   const SizedBox(height: 20),
                   const Text('Lorem ipsum dolor'),
@@ -43,7 +40,7 @@ class Welcome extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => HomeScreen()));
+                              builder: (context) => const HomeScreen()));
                     },
                     color: AppColors.primary,
                     padding: const EdgeInsets.symmetric(horizontal: 30),
