@@ -5,12 +5,13 @@ import 'package:tcc/screens/themes/constant.dart';
 import 'package:tcc/screens/themes/styles.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+// ignore: must_be_immutable
 class DetailScreen extends StatelessWidget {
-  var _name;
-  var _description;
-  var _imageUrl;
+  final _name;
+  final _description;
+  final _imageUrl;
 
-  DetailScreen(this._name, this._description, this._imageUrl);
+  const DetailScreen(this._name, this._description, this._imageUrl);
 
   Future<void> _launchLink(String url) async {
     if (await canLaunch(url)) {
@@ -177,7 +178,7 @@ class DetailScreen extends StatelessWidget {
                         'Descrição da Faculdade',
                         style: TextStyle(
                           height: 1.6,
-                          color: Color.fromARGB(255, 255, 255, 255)
+                          color: const Color.fromARGB(255, 255, 255, 255)
                               .withOpacity(0.7),
                         ),
                       ),

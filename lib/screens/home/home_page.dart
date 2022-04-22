@@ -3,7 +3,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:tcc/screens/themes/constant.dart';
 import 'package:tcc/screens/home/components/category_card.dart';
 import 'package:tcc/screens/home/components/doctor_card.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -24,7 +23,12 @@ class HomeScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     SvgPicture.asset('assets/icons/menu.svg'),
-                    SvgPicture.asset('assets/icons/profile.svg'),
+                    GestureDetector(
+                      onTap: () {},
+                      child: Hero(
+                          tag: 1,
+                          child: SvgPicture.asset('assets/icons/profile.svg')),
+                    ),
                   ],
                 ),
               ),

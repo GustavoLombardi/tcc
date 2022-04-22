@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:sizer/sizer.dart';
+import 'package:tcc/screens/home/repositorio_teste.dart';
+import 'package:tcc/screens/login/login_screen.dart';
 import 'package:tcc/screens/themes/styles.dart';
-import 'package:tcc/screens/welcome.dart';
-import 'screens/login/login_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       return GetMaterialApp(
         debugShowCheckedModeBanner: false,
         theme: androidTheme(),
-        home: const Welcome(),
+        home: const LoginScreen(),
       );
     });
   }
